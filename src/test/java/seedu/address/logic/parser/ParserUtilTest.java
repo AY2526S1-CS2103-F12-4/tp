@@ -18,10 +18,12 @@ import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
 import seedu.address.model.person.Phone;
+import seedu.address.model.person.StudyYear;
 import seedu.address.model.tag.Tag;
 
 public class ParserUtilTest {
     private static final String INVALID_NAME = "R@chel";
+    private static final String INVALID_STUDY_YEAR = "ABC1";
     private static final String INVALID_PHONE = "+651234";
     private static final String INVALID_ADDRESS = " ";
     private static final String INVALID_EMAIL = "example.com";
@@ -77,6 +79,29 @@ public class ParserUtilTest {
         String nameWithWhitespace = WHITESPACE + VALID_NAME + WHITESPACE;
         Name expectedName = new Name(VALID_NAME);
         assertEquals(expectedName, ParserUtil.parseName(nameWithWhitespace));
+    }
+
+    @Test
+    public void parseStudyYear_null_throwsNullPointerException() {
+        assertThrows(NullPointerException.class, () -> ParserUtil.parseStudyYear((String) null));
+    }
+
+    @Test
+    public void parseStudyYear_invalidValue_throwsParseException() {
+        assertThrows(ParseException.class, () -> ParserUtil.parseStudyYear(INVALID_STUDY_YEAR));
+    }
+
+    @Test
+    public void parseStudyYear_validValueWithoutWhitespace_returnsName() throws Exception {
+        StudyYear expectedStudyYear = new StudyYear(VALID_STUDY_YEAR);
+        assertEquals(expectedStudyYear, ParserUtil.parseStudyYear(VALID_STUDY_YEAR));
+    }
+
+    @Test
+    public void parseStudyYear_validValueWithWhitespace_returnsTrimmedName() throws Exception {
+        String studyYearWithWhitespace = WHITESPACE + VALID_STUDY_YEAR + WHITESPACE;
+        StudyYear expectedStudyYear = new StudyYear(VALID_STUDY_YEAR);
+        assertEquals(expectedStudyYear, ParserUtil.parseStudyYear(studyYearWithWhitespace));
     }
 
     @Test
