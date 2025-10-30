@@ -67,6 +67,7 @@
         "launch-and-shutdown": "Launch and shutdown",
         "adding-a-person": "Adding a person",
         "deleting-a-person": "Deleting a person",
+        "editing-a-person": "Editing a person",
         "setting-payment-status": "Setting payment status",
         "saving-data": "Saving data"
       },
