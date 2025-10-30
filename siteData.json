@@ -114,6 +114,10 @@
       "headings": {
         "zenith-user-guide": "Zenith User Guide",
         "quick-start": "Quick start",
+        "1-ensure-java-is-installed": "1. Ensure Java is Installed",
+        "2-download-zenith": "2. Download Zenith",
+        "3-run-zenith": "3. Run Zenith",
+        "4-try-your-first-commands": "4. Try Your First Commands",
         "user-interface": "User Interface",
         "mouseless-operation": "Mouseless Operation",
         "mouse-support": "Mouse Support",
