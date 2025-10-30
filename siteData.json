@@ -129,6 +129,7 @@
         "locating-persons-by-name-find": "Locating persons by name: find",
         "setting-payment-status-setpayment": "Setting payment status : setpayment",
         "deleting-a-person-delete": "Deleting a person : delete",
+        "adding-a-session-addsession": "Adding a session: addsession",
         "finding-a-free-session-free": "Finding a free session : free",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
