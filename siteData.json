@@ -67,6 +67,7 @@
         "launch-and-shutdown": "Launch and shutdown",
         "adding-a-person": "Adding a person",
         "deleting-a-person": "Deleting a person",
+        "setting-payment-status": "Setting payment status",
         "saving-data": "Saving data"
       },
       "headingKeywords": {}
@@ -113,12 +114,16 @@
       "headings": {
         "zenith-user-guide": "Zenith User Guide",
         "quick-start": "Quick start",
+        "user-interface": "User Interface",
+        "mouseless-operation": "Mouseless Operation",
+        "mouse-support": "Mouse Support",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
         "adding-a-person-add": "Adding a person: add",
         "listing-all-persons-list": "Listing all persons : list",
         "editing-a-person-edit": "Editing a person : edit",
         "locating-persons-by-name-find": "Locating persons by name: find",
+        "setting-payment-status-setpayment": "Setting payment status : setpayment",
         "deleting-a-person-delete": "Deleting a person : delete",
         "finding-a-free-session-free": "Finding a free session : free",
         "clearing-all-entries-clear": "Clearing all entries : clear",
