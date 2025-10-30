@@ -52,8 +52,6 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
-        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
-        "proposed-data-archiving": "[Proposed] Data archiving",
         "weeklysessions-component": "WeeklySessions Component",
         "free-feature": "Free Feature",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
@@ -67,6 +65,7 @@
         "launch-and-shutdown": "Launch and shutdown",
         "adding-a-person": "Adding a person",
         "deleting-a-person": "Deleting a person",
+        "finding-earliest-free-time-slot": "Finding earliest free time slot",
         "editing-a-person": "Editing a person",
         "setting-payment-status": "Setting payment status",
         "saving-data": "Saving data"
@@ -140,6 +139,19 @@
         "faq": "FAQ",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "archive/READme.md",
+      "headings": {},
+      "headingKeywords": {}
+    },
+    {
+      "src": "archive/Removed.md",
+      "headings": {
+        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
+        "proposed-data-archiving": "[Proposed] Data archiving"
       },
       "headingKeywords": {}
     },
