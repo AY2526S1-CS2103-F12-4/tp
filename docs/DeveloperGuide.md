@@ -1138,13 +1138,27 @@ Team size: 5
     - Categorize students in alternative education pathways not covered by current categories
     - Use flexible labels like "N/A" or "Other" for cases that don't fit standard academic classifications
 
-5. **Delete Commands for Subject and Session Tags**
+5. **Extend Edit command to support selective deletion of subjects and sessions**
 
-   **Current Limitation:** The EditCommand is the only way to clear subjects or sessions by replacing them entirely. It does not allow deleting of individual tags and our current delete command remove the entire person.
+   **Current Limitation:** The `edit` command currently only allows modification or replacement of subject and session tags. To remove a single subject or session, users must re-enter all tags they wish to keep, omitting only the unwanted one. This is cumbersome when a student has multiple subjects or sessions and only one needs to be removed.
 
-   **Planned Enhancement:** Introduce new commands like `deletesubject` and `deletesession` to enable targeted deletion from a person without affecting other data or requiring a full edit.
+   **Planned Enhancement:** Extend the `edit` command with dedicated flags for deleting individual subjects and sessions:
+    * Add `edit -dsub INDEX sub/SUBJECT` to delete a specific subject tag
+    * Add `edit -dsess INDEX session/SESSION` to delete a specific session
+    * Example: `edit -dsub 1 sub/MATH` would remove only the MATH subject without affecting other subjects or sessions
 
    Tutors will be able to:
-    - Delete a single subject tag (e.g., deletesubject 1 MATH) to remove just one subject without altering sessions or contact info.
-    - Maintain cleaner student records by selectively pruning outdated tags, improving data accuracy without deleting the entire person.
-    - Enjoy a more intuitive workflow with dedicated delete commands, reducing errors from multi-step edits and enhancing overall usability.
+    * Delete a single subject or session without re-entering all other tags
+    * Maintain cleaner student records by selectively pruning outdated information
+    * Enjoy a more intuitive workflow without the risk of accidentally omitting tags during replacement
+
+6. **Extend acceptable range of subjects beyond predefined list**
+
+   **Current Limitation:** The `addsubject` command currently only accepts a predefined list of subject codes. This may not accommodate tutors who teach specialized subjects, additional languages, or niche academic areas not covered by the standard list.
+
+   **Planned Enhancement:** We plan to allow tutors to add custom subject tags beyond the predefined list, while maintaining the existing standardized subjects for common use cases.
+
+   Tutors will be able to:
+    * Add custom subjects not in the predefined list (e.g., `addsubject 1 sub/JAPANESE`, `addsubject 2 sub/PSYCHOLOGY`)
+    * Continue using standardized subject codes with their assigned color schemes
+    * Assign custom colors or use a default color for user-defined subjects
