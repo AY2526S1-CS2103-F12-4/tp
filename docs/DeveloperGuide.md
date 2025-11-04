@@ -1072,13 +1072,13 @@ testers are expected to do more *exploratory* testing.
 ## **Appendix: Effort**
 
 * Difficulty and Challenges faced
-  * Trying to integrate sessions was challenging as it meant that we had to keep track of how each operation that added or removed a session for a particular individual would affect other sessions in the address book. 
-
-
+  * Trying to integrate sessions was challenging as it meant that we had to keep track of how each operation that added or removed a session for a particular individual would affect other sessions in the address book.
+  * Implementing the session edits was another challenge as we needed to prevent overlaps across all users. It had to remove old sessions, validate new ones for overlaps, add them, and rollback if validation failed.
 * Effort and Achievements of the project
   * Extended Tags with a `SessionTag` class which allow for easy identification and keep track of the `Session` associated to the tag.
   * Extended AddressBook with `WeeklySessions` that will keep track of all the unique sessions within a week to allow for scheduling operations to be performed.
   * Implemented a payment tracking system with three statuses (PENDING, PAID, OVERDUE), customizable billing cycles (1-31 days), automatic days overdue calculation
+  * Implemented a dual-mode edit command with flag-based operation switching. Contact editing (using -c flag) and session editing (using -s flag)
 
 
 ## **Appendix: Planned enhancements**
@@ -1137,3 +1137,14 @@ Team size: 5
     - Add contacts who are not currently enrolled in traditional educational institutions
     - Categorize students in alternative education pathways not covered by current categories
     - Use flexible labels like "N/A" or "Other" for cases that don't fit standard academic classifications
+
+5. **Delete Commands for Subject and Session Tags**
+
+   **Current Limitation:** The EditCommand is the only way to clear subjects or sessions by replacing them entirely. It does not allow deleting of individual tags and our current delete command remove the entire person.
+
+   **Planned Enhancement:** Introduce new commands like `deletesubject` and `deletesession` to enable targeted deletion from a person without affecting other data or requiring a full edit.
+
+   Tutors will be able to:
+    - Delete a single subject tag (e.g., deletesubject 1 MATH) to remove just one subject without altering sessions or contact info.
+    - Maintain cleaner student records by selectively pruning outdated tags, improving data accuracy without deleting the entire person.
+    - Enjoy a more intuitive workflow with dedicated delete commands, reducing errors from multi-step edits and enhancing overall usability.
