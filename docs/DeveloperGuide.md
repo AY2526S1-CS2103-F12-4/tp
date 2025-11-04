@@ -14,12 +14,11 @@
 ## **Acknowledgements**
 
 Zenith is built on top of code from [AB-3](https://github.com/se-edu/addressbook-level3).
-Some portions of the codebase were generated with assistance from JetBrains AI, Claude AI, including:
+Some portions of the codebase were written with assistance from JetBrains AI, Claude AI, including:
 
-* Generation of test cases and error handling scenarios
+* Writing of test cases and error handling scenarios
 * Code cleanup and refactoring suggestions
 * Documentation formatting and style consistency
-* Helper methods for certain operations
 
 --------------------------------------------------------------------------------------------------------------------
 
